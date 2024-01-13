@@ -36,9 +36,9 @@ def get_cpu_result():
     numeric_column_index = 2
 
     # 特定のpodをリストで指定 最後にPodname変更した方がいい
-    exclude_strings = ['carts-db-77dcb9c7b7-7k2jt', 'catalogue-db-d764d45d6-nn2rb', 'orders-db-6d74d86657-55pwm',
+    exclude_strings = ['carts-db-77dcb9c7b7-7k2jt', 'catalogue-db-d764d45d6-nn2rb', 'orders-db-6d74d86657-4j495',
                        'payment-67f94cc7b8-764tj', 'queue-master-cc96b5649-lr444', 'rabbitmq-5c6f77d9dd-x6d8g',
-                       'session-db-76d658cbf8-sbx79', 'shipping-7b856bf556-gr6rx']
+                       'session-db-76d658cbf8-n8plq', 'user-db-5bfb568f5b-mg2kh']
 
     pod_dict_key = []   # pod名
     pod_dict_value = [] # podのCPU使用量
@@ -110,7 +110,7 @@ def get_cpu_result():
 
     return notification_messages
 
-# test4.py からデータを取得
+
 notification_messages = get_cpu_result()
 
 # notification.py を呼び出し、Slack に通知

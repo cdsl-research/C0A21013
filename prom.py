@@ -12,7 +12,7 @@ def get_prometheus_data():
     request_count_data = prom.get_metric_range_data(metric_name=request_count_name)
 
     # リクエスト数だけを抽出して返す
-    values = request_count_data[0].get('values')
+    values = request_count_data[1].get('values')
     return values
 
 if __name__ == "__main__":
